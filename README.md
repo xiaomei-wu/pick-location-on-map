@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# Investigate: Pick a location on map in the location onboading process
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Tasks
+- Check known libs for location picking support
+- At the best do not use (google) maps -> DSGVO
+- Build a small local prototype outside of the project to demo the picker
 
-## Available Scripts
+### Alternatives to Google Maps API
 
-In the project directory, you can run:
+There are a bunch of alternatives to Google Maps API available, both open source and commercial. These links may provide some insight on that.
+https://geoawesomeness.com/google-maps-api-alternatives-best-cheap-affordable/
+https://stackoverflow.com/questions/4151593/alternatives-to-google-maps-api
 
-### `yarn start`
+### Libraries which can intergrate OpenStreetMap
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+https://wiki.openstreetmap.org/wiki/Frameworks
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Some Candidates with OSM
+1. Mapbox GL JS (Up to 50,000 free, 50,000 to 100,000 $5 per 1,000, mapping)
+2. LocationIQ ($100/monthly for 50,000 reqs/day, mapping and searching)
+3. Gisgraphy (120€/monthly for 43,200 reqs/day, mapping and searching)
+4. Openlayers (Free, mapping)
+5. Leaflet (Free, mapping)
+6. Nominatim (Free, searching)
 
-### `yarn test`
+## Why Nominatim and Leaflet?
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Nominatim https://nominatim.org/release-docs/develop/
 
-### `yarn build`
+- Free, open-source
+- Supports address search both in Forward Geocoding (search for an address based on the name query) and Reverse Geocoding (search for an address based on geographical loction)
+- Allows to do high volume, batch geocoding for any address
+- Well-documented, developed and maintained by the OpenStreetMap community and used as a default geocoding service for OSM data.
+- The server for Nominatim located in Amsterdam
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+(Source: https://www.geoapify.com/nominatim-geocoder)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Leaflet React https://react-leaflet.js.org/
+- Free, open-source
+- Easy-to-use and light-weight
+- Well-documented, quite large contribute community
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+(Source: https://www.geoapify.com/leaflet-vs-openlayers)
 
-### `yarn eject`
+# DEMO
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+A local prototype for placing a marker on a map and converting the marked geographical coordinated (lat, lng) into an address.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+https://codesandbox.io/s/demo-pick-location-on-map-38ugk?file=/src/Components/LocationMarker.js
