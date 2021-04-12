@@ -1,5 +1,4 @@
-# Investigate: Pick a location on map in the location onboading process
-
+# Investigate: Pick a location on a map and get the address
 ## Tasks
 - Check known libs for location picking support
 - At the best do not use (google) maps -> DSGVO
@@ -15,7 +14,7 @@ https://stackoverflow.com/questions/4151593/alternatives-to-google-maps-api
 
 https://wiki.openstreetmap.org/wiki/Frameworks
 
-### Some Candidates with OSM
+### Candidates
 1. Mapbox GL JS (Up to 50,000 free, 50,000 to 100,000 $5 per 1,000, mapping)
 2. LocationIQ ($100/monthly for 50,000 reqs/day, mapping and searching)
 3. Gisgraphy (120€/monthly for 43,200 reqs/day, mapping and searching)
