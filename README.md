@@ -7,6 +7,7 @@
 ### Alternatives to Google Maps API
 
 There are a bunch of alternatives to Google Maps API available, both open source and commercial. These links may provide some insight on that.
+
 https://geoawesomeness.com/google-maps-api-alternatives-best-cheap-affordable/
 https://stackoverflow.com/questions/4151593/alternatives-to-google-maps-api
 
