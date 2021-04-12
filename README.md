@@ -44,6 +44,7 @@ https://wiki.openstreetmap.org/wiki/Frameworks
 # DEMO
 
 A local prototype for placing a marker on a map and converting the marked geographical coordinated (lat, lng) into an address.
-Libraries & API used: Leaflet React and Nominatim
+
+Libraries & API used: Leaflet React and Nominatim.
 
 https://codesandbox.io/s/demo-pick-location-on-map-38ugk?file=/src/Components/LocationMarker.js
